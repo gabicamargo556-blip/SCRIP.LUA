@@ -1,26 +1,25 @@
+_G.LK_KEY = "LK-1234"
+
 local Keys = {
     "LK-1234",
     "LK-2026"
 }
 
-local Valid = false
+local valid = false
 
 for _, key in pairs(Keys) do
     if _G.LK_KEY == key then
-        Valid = true
+        valid = true
         break
     end
 end
 
-if not Valid then
+if not valid then
     warn("Key inválida!")
     return
 end
 
-print("Key válida!")
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SEUUSER/SEUREPO/main/main.lua"))()
-
 -- SCRIPT PRINCIPAL ABAIXO
 
 print("Script executado!")
