@@ -31,6 +31,3 @@ local success, err = pcall(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/gabicamargo556-blip/SCRIP.LUA/main/SCRIPT_LK_LAGER.lua"))()
 end)
 
-if not success then
-    warn("Erro ao carregar script global: "..tostring(err))
-end
