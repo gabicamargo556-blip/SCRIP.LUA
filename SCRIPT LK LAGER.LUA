@@ -1,4 +1,3 @@
--- 🔑 KEY SYSTEM
 local KeysValidas = {
     "LK-1234",
     "LK-2026"
@@ -7,25 +6,31 @@ local KeysValidas = {
 local key = _G.LK_KEY
 
 if not key then
-    warn("Nenhuma key definida!")
+    warn("Sem key")
     return
 end
 
-local valid = false
+local ok = false
 
 for _, v in pairs(KeysValidas) do
     if key == v then
-        valid = true
+        ok = true
         break
     end
 end
 
-if not valid then
-    warn("Key inválida!")
+if not ok then
+    warn("Key inválida")
     return
 end
 
-print("Key válida! Script carregado")
+print("Key OK")
 
--- 🔥 GLOBAL UPDATE (SEU SCRIPT REAL AQUI)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gabicamargo556-blip/LKLAG.LUA/main/LKLAG.LUA"))()
+-- 🔥 GLOBAL AQUI (ATUALIZAÇÃO REAL)
+local success, err = pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gabicamargo556-blip/SCRIP.LUA/main/SCRIPT_LK_LAGER.lua"))()
+end)
+
+if not success then
+    warn("Erro ao carregar script global: "..tostring(err))
+end
