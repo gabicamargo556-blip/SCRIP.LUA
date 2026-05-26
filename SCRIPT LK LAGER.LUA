@@ -1,5 +1,5 @@
 local Keys = {
-    "LK-1234",
+    "",
     "LK-2026",
     "LK-PREMIUM"
 }
